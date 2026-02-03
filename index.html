@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeramie Hicks | AI Engineer & Full-Stack Operator</title>
+    <meta name="description"
+        content="I build autonomous agents and business systems that hunt revenue. 25 years of business execution meets cutting-edge AI engineering.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Jeramie Hicks | AI Operator">
+    <meta property="og:description" content="I build autonomous agents and business systems that hunt revenue.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jeramie Hicks | AI Operator">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-mesh"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div style="display:flex;align-items:center;gap:12px">
+            <div class="status-dot"></div>
+            <span class="font-display" style="font-size:22px;letter-spacing:0.05em">JERAMIE HICKS <span
+                    style="color:var(--phorm-gray-light)">//</span> <span
+                    style="color:var(--phorm-blue)">OPERATOR</span></span>
+        </div>
+        <div class="nav-links">
+            <button onclick="scrollToId('intel')" data-section="intel">01 // Intel</button>
+            <button onclick="scrollToId('builds')" data-section="builds">02 // Builds</button>
+            <button onclick="scrollToId('stack')" data-section="stack">03 // Stack</button>
+            <button onclick="scrollToId('uplink')" data-section="uplink" style="color:var(--phorm-blue)"><i
+                    class="fas fa-robot"></i> 04 // AI Chat</button>
+            <button onclick="scrollToId('comms')" data-section="comms">05 // Contact</button>
+        </div>
+        <a href="Jeramie_Hicks_Resume.pdf" download class="btn-primary" style="padding:10px 20px;font-size:12px">
+            <i class="fas fa-download"></i> Resume PDF
+        </a>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <section id="intel" class="hero">
+            <div class="status-badge animate-fade-up">
+                <div class="status-dot"></div>
+                SYSTEM STATUS: ONLINE
+            </div>
+
+            <h1 class="font-display animate-fade-up delay-100">
+                WEAPONIZE<br><span>YOUR DATA.</span>
+            </h1>
+
+            <p class="hero-subtitle animate-fade-up delay-200">
+                I don't write code that sits on a shelf. I build <strong>autonomous agents</strong> and <strong>business
+                    systems</strong> that hunt revenue. 25 years of real-world execution meets cutting-edge AI.
+            </p>
+
+            <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap" class="animate-fade-up delay-300">
+                <button onclick="scrollToId('builds')" class="btn-primary">View Active Builds</button>
+                <div class="btn-outline" style="display:flex;flex-direction:column;align-items:start">
+                    <span style="font-size:10px;color:var(--text-secondary)">CURRENT LOCATION:</span>
+                    <span style="color:var(--text-primary)">BENTON HARBOR, MI</span>
+                </div>
+            </div>
+
+            <!-- GitHub Activity -->
+            <div class="glass" style="margin-top:48px;padding:20px;max-width:500px">
+                <div style="display:flex;justify-content:space-between;margin-bottom:16px">
+                    <span class="font-mono" style="font-size:11px;color:var(--text-secondary)">CONTRIBUTION ACTIVITY
+                        (YTD)</span>
+                    <span class="font-mono" style="font-size:11px;color:#22c55e">1,243 CONTRIBUTIONS</span>
+                </div>
+                <div class="git-grid" id="git-grid"></div>
+                <div class="font-mono"
+                    style="display:flex;justify-content:space-between;margin-top:12px;font-size:10px;color:var(--text-secondary)">
+                    <span>JAN</span><span>MAR</span><span>MAY</span><span>JUL</span><span>SEP</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUILDS -->
+        <section id="builds">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Active Builds</h2>
+                    <p class="section-sub">// PROPRIETARY PROJECTS & ARCHITECTURE</p>
+                </div>
+                <span class="font-mono"
+                    style="font-size:11px;padding:6px 12px;background:var(--phorm-surface);border-radius:4px">ACCESS:
+                    GRANTED</span>
+            </div>
+
+            <!-- NEURUH -->
+            <div class="glass hud-corners hover-lift animate-on-scroll" style="margin-bottom:40px">
+                <div class="grid-2" style="gap:0">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">NEURUH</h3>
+                            <span class="project-tag tag-live">v2.4.1 LIVE</span>
+                        </div>
+                        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
+                            Autonomous B2B Outreach Swarm. Three specialized agents (Scraper, Researcher, Copywriter)
+                            working in parallel to identify leads, enrich data via LinkedIn, and draft
+                            hyper-personalized outreach.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">Pinecone</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">FastAPI</span>
+                        </div>
+                        <div class="metrics">
+                            <div class="metric">
+                                <div class="metric-value">99%</div>
+                                <div class="metric-label">Time Reduction</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">450+</div>
+                                <div class="metric-label">Leads/Day</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <div
+                            style="display:flex;gap:6px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--phorm-gray)">
+                            <span style="width:10px;height:10px;border-radius:50%;background:#ef4444"></span>
+                            <span style="width:10px;height:10px;border-radius:50%;background:#eab308"></span>
+                            <span style="width:10px;height:10px;border-radius:50%;background:#22c55e"></span>
+                            <span
+                                style="margin-left:12px;color:var(--text-secondary);font-size:11px">agent_swarm.py</span>
+                        </div>
+                        <span class="ln">01</span><span class="kw">class</span> <span class="fn">NeuruhAgent</span>:
+                        <span class="ln">02</span> <span class="kw">def</span> <span class="fn">__init__</span>(self,
+                        objective):
+                        <span class="ln">03</span> self.memory = <span class="fn">VectorStore</span>(<span
+                            class="str">"b2b-leads"</span>)
+                        <span class="ln">04</span> self.tools = [<span class="str">"LinkedIn"</span>, <span
+                            class="str">"Email"</span>]
+                        <span class="ln">05</span>
+                        <span class="ln">06</span> <span class="kw">async def</span> <span
+                            class="fn">execute</span>(self, target):
+                        <span class="ln">07</span> <span class="cm"># 1. Scrape & Enrich</span>
+                        <span class="ln">08</span> data = <span class="kw">await</span> self.scrape(target)
+                        <span class="ln">09</span> enriched = self.memory.query(data)
+                        <span class="ln">10</span>
+                        <span class="ln">11</span> <span class="kw">if</span> enriched.score > <span
+                            class="str">0.9</span>:
+                        <span class="ln">12</span> <span class="kw">return</span> self.deploy(enriched)
+                    </div>
+                </div>
+            </div>
+
+            <!-- ARB-BOT -->
+            <div class="glass hud-corners hover-lift animate-on-scroll">
+                <div class="grid-2" style="gap:0">
+                    <div
+                        style="background:var(--phorm-black);padding:24px;font-family:'JetBrains Mono',monospace;font-size:12px">
+                        <div style="display:flex;justify-content:space-between;margin-bottom:20px">
+                            <span style="color:var(--text-secondary)">LIVE FEED</span>
+                            <span style="color:#22c55e"><i class="fas fa-circle" style="font-size:6px"></i>
+                                ACTIVE</span>
+                        </div>
+                        <div id="arb-log" style="height:200px;overflow-y:auto"></div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">ARB-BOT</h3>
+                            <span class="project-tag tag-profit">PROFIT GEN</span>
+                        </div>
+                        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
+                            High-frequency arbitrage bot for physical goods. Scrapes marketplace APIs, compares against
+                            historical eBay sold data, and alerts when profit margin exceeds 40%.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Selenium</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Twilio</span>
+                            <span class="tech-tag">Pandas</span>
+                        </div>
+                        <div
+                            style="background:var(--phorm-black);padding:16px;margin-top:20px;border-radius:8px;font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--text-secondary)">
+                            IF (Price + Ship) < (Sold * 0.6):<br>
+                                &nbsp;&nbsp;-> TRIGGER_BUY_ALERT()<br>
+                                ELSE: -> DISCARD
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT GALLERY -->
+            <div class="section-header" style="margin-top:80px">
+                <div>
+                    <h3 class="section-title">Visual Showcase</h3>
+                    <p class="section-sub">// ARCHITECTURE & INTERFACES</p>
+                </div>
+            </div>
+
+            <div class="grid-2" style="gap:16px">
+                <div class="glass hover-lift" style="overflow:hidden;border-radius:12px">
+                    <img src="assets/images/neuruh-prime.png" alt="NEURUH Prime - Deterministic Intelligence"
+                        style="width:100%;height:auto;display:block">
+                    <div style="padding:16px;background:var(--phorm-surface)">
+                        <div class="font-display" style="font-size:14px;margin-bottom:4px">NEURUH PRIME</div>
+                        <div class="font-mono" style="font-size:11px;color:var(--text-secondary)">Autonomous Real Estate
+                            OS</div>
+                    </div>
+                </div>
+                <div class="glass hover-lift" style="overflow:hidden;border-radius:12px">
+                    <img src="assets/images/neuruh-all.png" alt="NEURUH ALL - Pure Execution"
+                        style="width:100%;height:auto;display:block">
+                    <div style="padding:16px;background:var(--phorm-surface)">
+                        <div class="font-display" style="font-size:14px;margin-bottom:4px">NEURUH ALL</div>
+                        <div class="font-mono" style="font-size:11px;color:var(--text-secondary)">Decentralized
+                            Acquisition Marketplace</div>
+                    </div>
+                </div>
+                <div class="glass hover-lift" style="overflow:hidden;border-radius:12px">
+                    <img src="assets/images/neuruh-recursive.png" alt="Intelligence is Recursive"
+                        style="width:100%;height:auto;display:block">
+                    <div style="padding:16px;background:var(--phorm-surface)">
+                        <div class="font-display" style="font-size:14px;margin-bottom:4px">RECURSIVE INTELLIGENCE</div>
+                        <div class="font-mono" style="font-size:11px;color:var(--text-secondary)">Execution Layer for
+                            Sovereign AI</div>
+                    </div>
+                </div>
+                <div class="glass hover-lift" style="overflow:hidden;border-radius:12px">
+                    <img src="assets/images/opus-singularity.png" alt="OPUS Singularity"
+                        style="width:100%;height:auto;display:block">
+                    <div style="padding:16px;background:var(--phorm-surface)">
+                        <div class="font-display" style="font-size:14px;margin-bottom:4px">OPUS SINGULARITY</div>
+                        <div class="font-mono" style="font-size:11px;color:var(--text-secondary)">Neural Rack Agent
+                            Dashboard</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STACK -->
+        <section id="stack">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Full Arsenal</h2>
+                    <p class="section-sub">// TECHNICAL CAPABILITIES</p>
+                </div>
+            </div>
+
+            <div class="grid-3">
+                <div class="glass skill-card hover-lift animate-on-scroll">
+                    <h4 class="skill-title"><i class="fas fa-code" style="color:var(--phorm-blue)"></i> Engineering</h4>
+                    <ul class="skill-list">
+                        <li><span class="skill-dot"></span>Python (FastAPI, Pandas)</li>
+                        <li><span class="skill-dot"></span>TypeScript / Node.js</li>
+                        <li><span class="skill-dot"></span>React / Next.js</li>
+                        <li><span class="skill-dot"></span>SQL (Postgres) & NoSQL</li>
+                        <li><span class="skill-dot"></span>Docker / Containerization</li>
+                        <li><span class="skill-dot"></span>REST & GraphQL APIs</li>
+                    </ul>
+                </div>
+
+                <div class="glass skill-card alt hover-lift animate-on-scroll" style="animation-delay:0.1s">
+                    <h4 class="skill-title"><i class="fas fa-brain" style="color:#61dafb"></i> AI Ops</h4>
+                    <ul class="skill-list">
+                        <li><span class="skill-dot"></span>OpenAI / Anthropic APIs</li>
+                        <li><span class="skill-dot"></span>RAG Architecture</li>
+                        <li><span class="skill-dot"></span>Vector DBs (Pinecone)</li>
+                        <li><span class="skill-dot"></span>Agentic Workflows</li>
+                        <li><span class="skill-dot"></span>LangChain / LlamaIndex</li>
+                        <li><span class="skill-dot"></span>Prompt Engineering</li>
+                    </ul>
+                </div>
+
+                <div class="glass skill-card tertiary hover-lift animate-on-scroll" style="animation-delay:0.2s">
+                    <h4 class="skill-title"><i class="fas fa-rocket" style="color:#888"></i> Business OS
+                    </h4>
+                    <ul class="skill-list">
+                        <li><span class="skill-dot"></span>Notion Systems Architecture</li>
+                        <li><span class="skill-dot"></span>Zapier / Make Automation</li>
+                        <li><span class="skill-dot"></span>CRM Logic (HubSpot)</li>
+                        <li><span class="skill-dot"></span>Sales Psychology</li>
+                        <li><span class="skill-dot"></span>ROI Analysis</li>
+                        <li><span class="skill-dot"></span>Process Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI CHAT -->
+        <section id="uplink">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">AI Interview</h2>
+                    <p class="section-sub">// ASK ME ANYTHING</p>
+                </div>
+                <div class="status-badge">
+                    <div class="status-dot"></div>
+                    READY
+                </div>
+            </div>
+
+            <div class="chat-container">
+                <div class="chat-header">
+                    <span class="font-mono" style="font-size:12px"><i class="fas fa-robot"
+                            style="margin-right:8px;color:var(--phorm-blue)"></i>JERAMIE_AI</span>
+                    <span class="font-mono" style="font-size:10px;color:var(--text-secondary)">POWERED BY AI</span>
+                </div>
+                <div class="chat-messages" id="chat-output">
+                    <div class="msg msg-ai">
+                        <div class="msg-sender">JERAMIE_AI</div>
+                        Welcome. I'm here to answer your questions about my experience, tech stack, and how I can bring
+                        value to your mission. What would you like to know?
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="user-input" class="chat-input"
+                        placeholder="Ask about my experience, projects, or skills..."
+                        onkeypress="handleKeyPress(event)">
+                    <button onclick="sendQuery()" class="btn-primary" style="padding:14px 24px">SEND</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="comms">
+            <div style="text-align:center">
+                <h2 class="section-title font-display" style="font-size:3rem;margin-bottom:40px">INITIATE CONTACT</h2>
+
+                <div class="contact-grid">
+                    <a href="https://github.com/yousernamehere" target="_blank" class="glass contact-card hover-lift">
+                        <i class="fab fa-github"></i>
+                        <span>/YOUSERNAMEHERE</span>
+                    </a>
+                    <a href="https://linkedin.com/in/jeramieshicks" target="_blank"
+                        class="glass contact-card hover-lift">
+                        <i class="fab fa-linkedin"></i>
+                        <span>/JERAMIESHICKS</span>
+                    </a>
+                    <a href="https://x.com/JeramieHicks" target="_blank" class="glass contact-card hover-lift">
+                        <i class="fab fa-x-twitter"></i>
+                        <span>@JERAMIEHICKS</span>
+                    </a>
+                    <a href="https://youtube.com/@Neuruh" target="_blank" class="glass contact-card hover-lift">
+                        <i class="fab fa-youtube"></i>
+                        <span>@NEURUH</span>
+                    </a>
+                </div>
+
+                <a href="mailto:Jeramieshicks@gmail.com" class="phone-cta">
+                    <div class="phone-label">DIRECT LINE</div>
+                    <div class="phone-number">269-500-1768</div>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            SYSTEM_ID: JERAMIE_HICKS_v5.0 // DEPLOYED 2024 // PERSONAL EXCELLENCE IS THE ULTIMATE REBELLION
+        </footer>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
