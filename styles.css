@@ -26,19 +26,25 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background: var(--phorm-black);
+  background-image: url('assets/images/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--text-primary);
   min-height: 100vh;
   overflow-x: hidden;
   font-weight: 400;
 }
 
-/* Subtle Background Glow */
+/* Enhanced Background Overlay */
 .bg-mesh {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse at 30% 10%, rgba(0, 167, 211, 0.08) 0%, transparent 40%),
-    radial-gradient(ellipse at 70% 90%, rgba(0, 167, 211, 0.05) 0%, transparent 40%);
+    radial-gradient(ellipse at 30% 10%, rgba(0, 167, 211, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 90%, rgba(0, 167, 211, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0.4) 0%, transparent 80%);
   pointer-events: none;
   z-index: 0;
 }
