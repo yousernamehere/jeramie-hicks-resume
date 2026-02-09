@@ -138,8 +138,8 @@
         <section id="builds">
             <div class="section-header">
                 <div>
-                    <h2 class="section-title">Active Builds</h2>
-                    <p class="section-sub">// PROPRIETARY PROJECTS & ARCHITECTURE</p>
+                    <h2 class="section-title">Production Systems</h2>
+                    <p class="section-sub">// LIVE APPLICATIONS & FRAMEWORKS</p>
                 </div>
                 <span class="font-mono"
                     style="font-size:11px;padding:6px 12px;background:var(--phorm-surface);border-radius:4px">ACCESS:
@@ -155,9 +155,9 @@
                             <span class="project-tag tag-live">v2.4.1 LIVE</span>
                         </div>
                         <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
-                            Autonomous B2B Outreach Swarm. Three specialized agents (Scraper, Researcher, Copywriter)
-                            working in parallel to identify leads, enrich data via LinkedIn, and draft
-                            hyper-personalized outreach.
+                            AI-powered outreach automation system. Multi-agent architecture for lead generation,
+                            research, and personalized messaging. Built with LangChain for agent orchestration and
+                            Pinecone for vector storage.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">Python</span>
@@ -168,12 +168,12 @@
                         </div>
                         <div class="metrics">
                             <div class="metric">
-                                <div class="metric-value">99%</div>
-                                <div class="metric-label">Time Reduction</div>
+                                <div class="metric-value">Multi-Agent</div>
+                                <div class="metric-label">Architecture</div>
                             </div>
                             <div class="metric">
-                                <div class="metric-value">450+</div>
-                                <div class="metric-label">Leads/Day</div>
+                                <div class="metric-value">Vector DB</div>
+                                <div class="metric-label">Pinecone</div>
                             </div>
                         </div>
                     </div>
@@ -216,17 +216,21 @@
                             <span class="project-tag tag-live">🚀 LIVE</span>
                         </div>
                         <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
-                            Full-stack booking platform with real-time availability, payment processing via Stripe, and automated email confirmations. Built for service businesses to manage appointments, clients, and revenue in one unified system.
+                            Full-stack booking platform with real-time availability, payment processing via Stripe, and
+                            automated email confirmations. Built for service businesses to manage appointments, clients,
+                            and revenue in one unified system.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">Next.js</span>
                             <span class="tech-tag">TypeScript</span>
                             <span class="tech-tag">Stripe</span>
+                            <span class="tech-tag">Twilio</span>
                             <span class="tech-tag">PostgreSQL</span>
                             <span class="tech-tag">Vercel</span>
                         </div>
                         <div style="margin-top:20px">
-                            <a href="https://bookeit.com" target="_blank" class="btn-primary" style="display:inline-block;padding:12px 24px;text-decoration:none">
+                            <a href="https://bookeit.com" target="_blank" class="btn-primary"
+                                style="display:inline-block;padding:12px 24px;text-decoration:none">
                                 <i class="fas fa-external-link-alt"></i> View Live Site
                             </a>
                         </div>
@@ -240,18 +244,21 @@
                             <span
                                 style="margin-left:12px;color:var(--text-secondary);font-size:11px">booking_api.ts</span>
                         </div>
-                        <span class="ln">01</span><span class="kw">export async function</span> <span class="fn">createBooking</span>() {
-                        <span class="ln">02</span>  <span class="kw">const</span> session = <span class="kw">await</span> <span class="fn">stripe.checkout</span>
-                        <span class="ln">03</span>    .sessions.<span class="fn">create</span>({
-                        <span class="ln">04</span>      payment_method_types: [<span class="str">'card'</span>],
-                        <span class="ln">05</span>      line_items: bookingItems,
-                        <span class="ln">06</span>      mode: <span class="str">'payment'</span>,
-                        <span class="ln">07</span>    });
+                        <span class="ln">01</span><span class="kw">export async function</span> <span
+                            class="fn">createBooking</span>() {
+                        <span class="ln">02</span> <span class="kw">const</span> session = <span class="kw">await</span>
+                        <span class="fn">stripe.checkout</span>
+                        <span class="ln">03</span> .sessions.<span class="fn">create</span>({
+                        <span class="ln">04</span> payment_method_types: [<span class="str">'card'</span>],
+                        <span class="ln">05</span> line_items: bookingItems,
+                        <span class="ln">06</span> mode: <span class="str">'payment'</span>,
+                        <span class="ln">07</span> });
                         <span class="ln">08</span>
-                        <span class="ln">09</span>  <span class="kw">await</span> db.bookings.<span class="fn">insert</span>({
-                        <span class="ln">10</span>    sessionId: session.id,
-                        <span class="ln">11</span>    status: <span class="str">'confirmed'</span>
-                        <span class="ln">12</span>  });
+                        <span class="ln">09</span> <span class="kw">await</span> db.bookings.<span
+                            class="fn">insert</span>({
+                        <span class="ln">10</span> sessionId: session.id,
+                        <span class="ln">11</span> status: <span class="str">'confirmed'</span>
+                        <span class="ln">12</span> });
                         <span class="ln">13</span>}
                     </div>
                 </div>
@@ -269,16 +276,20 @@
                             <span
                                 style="margin-left:12px;color:var(--text-secondary);font-size:11px">architect.jsx</span>
                         </div>
-                        <span class="ln">01</span><span class="kw">const</span> <span class="fn">MasterArchitect</span> = () => {
-                        <span class="ln">02</span>  <span class="kw">const</span> [blueprint, setBlueprint] = 
-                        <span class="ln">03</span>    <span class="fn">useState</span>({});
+                        <span class="ln">01</span><span class="kw">const</span> <span class="fn">MasterArchitect</span>
+                        = () => {
+                        <span class="ln">02</span> <span class="kw">const</span> [blueprint, setBlueprint] =
+                        <span class="ln">03</span> <span class="fn">useState</span>({});
                         <span class="ln">04</span>
-                        <span class="ln">05</span>  <span class="kw">const</span> <span class="fn">generateSpec</span> = <span class="kw">async</span> () => {
-                        <span class="ln">06</span>    <span class="kw">const</span> prompt = <span class="fn">compileTokens</span>(
-                        <span class="ln">07</span>      blueprint, governance
-                        <span class="ln">08</span>    );
-                        <span class="ln">09</span>    <span class="kw">return await</span> ai.<span class="fn">generate</span>(prompt);
-                        <span class="ln">10</span>  };
+                        <span class="ln">05</span> <span class="kw">const</span> <span class="fn">generateSpec</span> =
+                        <span class="kw">async</span> () => {
+                        <span class="ln">06</span> <span class="kw">const</span> prompt = <span
+                            class="fn">compileTokens</span>(
+                        <span class="ln">07</span> blueprint, governance
+                        <span class="ln">08</span> );
+                        <span class="ln">09</span> <span class="kw">return await</span> ai.<span
+                            class="fn">generate</span>(prompt);
+                        <span class="ln">10</span> };
                         <span class="ln">11</span>};
                     </div>
                     <div class="project-card">
@@ -287,12 +298,15 @@
                             <span class="project-tag tag-live">v3.1 DEPLOYED</span>
                         </div>
                         <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
-                            AI-assisted system specification framework. Guides users through structured prompting with tiered complexity (Quick Start, Comprehensive, Deep Dive). Generates production-ready technical specifications with governance layers and NotebookLM export.
+                            AI-assisted system specification framework. Guides users through structured prompting with
+                            tiered complexity (Quick Start, Comprehensive, Deep Dive). Generates production-ready
+                            technical specifications with governance layers and NotebookLM export.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">React</span>
                             <span class="tech-tag">Vite</span>
                             <span class="tech-tag">Stripe</span>
+                            <span class="tech-tag">Vercel</span>
                             <span class="tech-tag">Gemini API</span>
                         </div>
                         <div class="metrics">
@@ -318,22 +332,25 @@
                             <span class="project-tag tag-live">PRODUCTION</span>
                         </div>
                         <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
-                            Technical Anchors system for generating photorealistic architectural renders. Deterministic prompt compiler with strict token governance, camera physics simulation (ISO, aperture, shutter), and material consistency validation. Built for architects and designers.
+                            Technical Anchors system for generating photorealistic architectural renders. Deterministic
+                            prompt compiler with strict token governance, camera physics simulation (ISO, aperture,
+                            shutter), and material consistency validation. Built for architects and designers.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">React</span>
-                            <span class="tech-tag">TypeScript</span>
                             <span class="tech-tag">Vite</span>
-                            <span class="tech-tag">AI Integration</span>
+                            <span class="tech-tag">Replicate API</span>
+                            <span class="tech-tag">IndexedDB</span>
+                            <span class="tech-tag">Vercel</span>
                         </div>
                         <div class="metrics">
                             <div class="metric">
-                                <div class="metric-value">12-Bit</div>
-                                <div class="metric-label">Color Depth</div>
+                                <div class="metric-value">3</div>
+                                <div class="metric-label">AI Models</div>
                             </div>
                             <div class="metric">
-                                <div class="metric-value">100%</div>
-                                <div class="metric-label">Deterministic</div>
+                                <div class="metric-value">12-Bit</div>
+                                <div class="metric-label">Color Depth</div>
                             </div>
                         </div>
                     </div>
@@ -346,17 +363,23 @@
                             <span
                                 style="margin-left:12px;color:var(--text-secondary);font-size:11px">lens_engine.ts</span>
                         </div>
-                        <span class="ln">01</span><span class="kw">interface</span> <span class="fn">CameraSettings</span> {
-                        <span class="ln">02</span>  iso: <span class="str">100</span> | <span class="str">200</span> | <span class="str">400</span>;
-                        <span class="ln">03</span>  aperture: <span class="str">'f/1.4'</span> | <span class="str">'f/2.8'</span>;
-                        <span class="ln">04</span>  shutter: <span class="str">'1/125'</span> | <span class="str">'1/250'</span>;
+                        <span class="ln">01</span><span class="kw">interface</span> <span
+                            class="fn">CameraSettings</span> {
+                        <span class="ln">02</span> iso: <span class="str">100</span> | <span class="str">200</span> |
+                        <span class="str">400</span>;
+                        <span class="ln">03</span> aperture: <span class="str">'f/1.4'</span> | <span
+                            class="str">'f/2.8'</span>;
+                        <span class="ln">04</span> shutter: <span class="str">'1/125'</span> | <span
+                            class="str">'1/250'</span>;
                         <span class="ln">05</span>}
                         <span class="ln">06</span>
-                        <span class="ln">07</span><span class="kw">function</span> <span class="fn">compilePrompt</span>(
-                        <span class="ln">08</span>  anchors, lens
+                        <span class="ln">07</span><span class="kw">function</span> <span
+                            class="fn">compilePrompt</span>(
+                        <span class="ln">08</span> anchors, lens
                         <span class="ln">09</span>) {
-                        <span class="ln">10</span>  <span class="kw">return</span> <span class="fn">validate</span>(anchors)
-                        <span class="ln">11</span>    .<span class="fn">applyLens</span>(lens);
+                        <span class="ln">10</span> <span class="kw">return</span> <span
+                            class="fn">validate</span>(anchors)
+                        <span class="ln">11</span> .<span class="fn">applyLens</span>(lens);
                         <span class="ln">12</span>}
                     </div>
                 </div>
@@ -556,7 +579,7 @@
                     </a>
                 </div>
 
-                <a href="mailto:Jeramieshicks@gmail.com" class="phone-cta">
+                <a href="mailto:jeramie@neuruh.com" class="phone-cta">
                     <div class="phone-label">DIRECT LINE</div>
                     <div class="phone-number">269-500-1768</div>
                 </a>
