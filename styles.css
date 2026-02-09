@@ -1069,3 +1069,192 @@ footer {
     --text-secondary: #c0c0c0;
   }
 }
+
+/* ========== TAB NAVIGATION ========== */
+.tab-nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: var(--phorm-surface);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  padding: 12px 24px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tab-btn:hover {
+  border-color: var(--phorm-blue);
+  color: var(--text-primary);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, var(--phorm-blue) 0%, var(--phorm-blue-light) 100%);
+  border-color: var(--phorm-blue);
+  color: white;
+  box-shadow: 0 4px 20px var(--phorm-blue-glow);
+}
+
+.tab-btn .badge {
+  background: rgba(255,255,255,0.2);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.tab-btn.active .badge {
+  background: rgba(255,255,255,0.3);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeInUp 0.4s ease;
+}
+
+/* ========== GITHUB SHOWCASE CARDS ========== */
+.github-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.github-card {
+  background: var(--phorm-surface);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.github-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--phorm-blue), var(--phorm-blue-light));
+}
+
+.github-card:hover {
+  border-color: var(--phorm-blue);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px var(--phorm-blue-glow);
+}
+
+.github-card .repo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 12px;
+}
+
+.github-card .repo-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.github-card .repo-lang {
+  font-size: 11px;
+  padding: 4px 10px;
+  background: var(--phorm-gray);
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--phorm-blue);
+}
+
+.github-card .repo-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.github-card .repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--phorm-blue);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.github-card .repo-link:hover {
+  color: var(--phorm-blue-light);
+  gap: 12px;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: var(--phorm-surface);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: var(--phorm-blue);
+  box-shadow: 0 0 20px var(--phorm-blue-glow);
+}
+
+.stat-value {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: var(--phorm-blue);
+  letter-spacing: 0.02em;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .tab-nav {
+    flex-direction: column;
+  }
+  .tab-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .github-grid {
+    grid-template-columns: 1fr;
+  }
+}

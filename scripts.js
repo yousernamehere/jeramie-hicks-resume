@@ -86,6 +86,27 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ==========================================
+// TAB SWITCHING FUNCTIONALITY
+// ==========================================
+function switchTab(tabId) {
+  // Remove active class from all tab buttons
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  
+  // Remove active class from all tab content
+  document.querySelectorAll('.tab-content').forEach(content => {
+    content.classList.remove('active');
+  });
+  
+  // Add active class to clicked button
+  event.currentTarget.classList.add('active');
+  
+  // Show the corresponding tab content
+  document.getElementById(tabId).classList.add('active');
+}
+
+// ==========================================
 // PARTICLE CANVAS SYSTEM
 // ==========================================
 function initParticleCanvas() {

@@ -146,281 +146,487 @@
                     GRANTED</span>
             </div>
 
-            <!-- NEURUH -->
-            <div class="glass hud-corners hover-lift animate-on-scroll" style="margin-bottom:40px">
-                <div class="grid-2" style="gap:0">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">NEURUH</h3>
-                            <span class="project-tag tag-live">v2.4.1 LIVE</span>
-                        </div>
-                        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
-                            AI-powered outreach automation system. Multi-agent architecture for lead generation,
-                            research, and personalized messaging. Built with LangChain for agent orchestration and
-                            Pinecone for vector storage.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">LangChain</span>
-                            <span class="tech-tag">Pinecone</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">FastAPI</span>
-                        </div>
-                        <div class="metrics">
-                            <div class="metric">
-                                <div class="metric-value">Multi-Agent</div>
-                                <div class="metric-label">Architecture</div>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-value">Vector DB</div>
-                                <div class="metric-label">Pinecone</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="code-block">
-                        <div
-                            style="display:flex;gap:6px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--phorm-gray)">
-                            <span style="width:10px;height:10px;border-radius:50%;background:#ef4444"></span>
-                            <span style="width:10px;height:10px;border-radius:50%;background:#eab308"></span>
-                            <span style="width:10px;height:10px;border-radius:50%;background:#22c55e"></span>
-                            <span
-                                style="margin-left:12px;color:var(--text-secondary);font-size:11px">agent_swarm.py</span>
-                        </div>
-                        <span class="ln">01</span><span class="kw">class</span> <span class="fn">NeuruhAgent</span>:
-                        <span class="ln">02</span> <span class="kw">def</span> <span class="fn">__init__</span>(self,
-                        objective):
-                        <span class="ln">03</span> self.memory = <span class="fn">VectorStore</span>(<span
-                            class="str">"b2b-leads"</span>)
-                        <span class="ln">04</span> self.tools = [<span class="str">"LinkedIn"</span>, <span
-                            class="str">"Email"</span>]
-                        <span class="ln">05</span>
-                        <span class="ln">06</span> <span class="kw">async def</span> <span
-                            class="fn">execute</span>(self, target):
-                        <span class="ln">07</span> <span class="cm"># 1. Scrape & Enrich</span>
-                        <span class="ln">08</span> data = <span class="kw">await</span> self.scrape(target)
-                        <span class="ln">09</span> enriched = self.memory.query(data)
-                        <span class="ln">10</span>
-                        <span class="ln">11</span> <span class="kw">if</span> enriched.score > <span
-                            class="str">0.9</span>:
-                        <span class="ln">12</span> <span class="kw">return</span> self.deploy(enriched)
-                    </div>
+            <!-- STATS GRID -->
+            <div class="stats-grid">
+                <div class="stat-card glass">
+                    <div class="stat-value">19+</div>
+                    <div class="stat-label">Repositories</div>
+                </div>
+                <div class="stat-card glass">
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">Production Apps</div>
+                </div>
+                <div class="stat-card glass">
+                    <div class="stat-value">25+</div>
+                    <div class="stat-label">Years Building</div>
+                </div>
+                <div class="stat-card glass">
+                    <div class="stat-value">∞</div>
+                    <div class="stat-label">Lines of Code</div>
                 </div>
             </div>
 
-            <!-- BOOKEIT.COM -->
-            <div class="glass hud-corners hover-lift animate-on-scroll" style="margin-bottom:40px">
-                <div class="grid-2" style="gap:0">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">BOOKEIT.COM</h3>
-                            <span class="project-tag tag-live">🚀 LIVE</span>
-                        </div>
-                        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
-                            Full-stack booking platform with real-time availability, payment processing via Stripe, and
-                            automated email confirmations. Built for service businesses to manage appointments, clients,
-                            and revenue in one unified system.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Stripe</span>
-                            <span class="tech-tag">Twilio</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Vercel</span>
-                        </div>
-                        <div style="margin-top:20px">
-                            <a href="https://bookeit.com" target="_blank" class="btn-primary"
-                                style="display:inline-block;padding:12px 24px;text-decoration:none">
-                                <i class="fas fa-external-link-alt"></i> View Live Site
-                            </a>
-                        </div>
-                    </div>
-                    <div class="code-block">
-                        <div
-                            style="display:flex;gap:6px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--phorm-gray)">
-                            <span style="width:10px;height:10px;border-radius:50%;background:#ef4444"></span>
-                            <span style="width:10px;height:10px;border-radius:50%;background:#eab308"></span>
-                            <span style="width:10px;height:10px;border-radius:50%;background:#22c55e"></span>
-                            <span
-                                style="margin-left:12px;color:var(--text-secondary);font-size:11px">booking_api.ts</span>
-                        </div>
-                        <span class="ln">01</span><span class="kw">export async function</span> <span
-                            class="fn">createBooking</span>() {
-                        <span class="ln">02</span> <span class="kw">const</span> session = <span class="kw">await</span>
-                        <span class="fn">stripe.checkout</span>
-                        <span class="ln">03</span> .sessions.<span class="fn">create</span>({
-                        <span class="ln">04</span> payment_method_types: [<span class="str">'card'</span>],
-                        <span class="ln">05</span> line_items: bookingItems,
-                        <span class="ln">06</span> mode: <span class="str">'payment'</span>,
-                        <span class="ln">07</span> });
-                        <span class="ln">08</span>
-                        <span class="ln">09</span> <span class="kw">await</span> db.bookings.<span
-                            class="fn">insert</span>({
-                        <span class="ln">10</span> sessionId: session.id,
-                        <span class="ln">11</span> status: <span class="str">'confirmed'</span>
-                        <span class="ln">12</span> });
-                        <span class="ln">13</span>}
-                    </div>
-                </div>
+            <!-- TAB NAVIGATION -->
+            <div class="tab-nav">
+                <button class="tab-btn active" onclick="switchTab('live-apps')">
+                    🚀 Live Apps <span class="badge">5</span>
+                </button>
+                <button class="tab-btn" onclick="switchTab('open-source')">
+                    🔓 Open Source <span class="badge">6</span>
+                </button>
+                <button class="tab-btn" onclick="switchTab('ai-projects')">
+                    🧠 AI Projects <span class="badge">5</span>
+                </button>
             </div>
 
-            <!-- MASTER ARCHITECT -->
-            <div class="glass hud-corners hover-lift animate-on-scroll" style="margin-bottom:40px">
-                <div class="grid-2" style="gap:0">
-                    <div class="code-block">
-                        <div
-                            style="display:flex;gap:6px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--phorm-gray)">
-                            <span style="width:10px;height:10px;border-radius:50%;background:#ef4444"></span>
-                            <span style="width:10px;height:10px;border-radius:50%;background:#eab308"></span>
-                            <span style="width:10px;height:10px;border-radius:50%;background:#22c55e"></span>
-                            <span
-                                style="margin-left:12px;color:var(--text-secondary);font-size:11px">architect.jsx</span>
-                        </div>
-                        <span class="ln">01</span><span class="kw">const</span> <span class="fn">MasterArchitect</span>
-                        = () => {
-                        <span class="ln">02</span> <span class="kw">const</span> [blueprint, setBlueprint] =
-                        <span class="ln">03</span> <span class="fn">useState</span>({});
-                        <span class="ln">04</span>
-                        <span class="ln">05</span> <span class="kw">const</span> <span class="fn">generateSpec</span> =
-                        <span class="kw">async</span> () => {
-                        <span class="ln">06</span> <span class="kw">const</span> prompt = <span
-                            class="fn">compileTokens</span>(
-                        <span class="ln">07</span> blueprint, governance
-                        <span class="ln">08</span> );
-                        <span class="ln">09</span> <span class="kw">return await</span> ai.<span
-                            class="fn">generate</span>(prompt);
-                        <span class="ln">10</span> };
-                        <span class="ln">11</span>};
-                    </div>
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">MASTER ARCHITECT</h3>
-                            <span class="project-tag tag-live">v3.1 DEPLOYED</span>
-                        </div>
-                        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
-                            AI-assisted system specification framework. Guides users through structured prompting with
-                            tiered complexity (Quick Start, Comprehensive, Deep Dive). Generates production-ready
-                            technical specifications with governance layers and NotebookLM export.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Vite</span>
-                            <span class="tech-tag">Stripe</span>
-                            <span class="tech-tag">Vercel</span>
-                            <span class="tech-tag">Gemini API</span>
-                        </div>
-                        <div class="metrics">
-                            <div class="metric">
-                                <div class="metric-value">3</div>
-                                <div class="metric-label">Tier System</div>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-value">100%</div>
-                                <div class="metric-label">Spec Quality</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- TAB: LIVE APPS -->
+            <div id="live-apps" class="tab-content active">
 
-            <!-- PHOTOREALISM STUDIO -->
-            <div class="glass hud-corners hover-lift animate-on-scroll" style="margin-bottom:40px">
-                <div class="grid-2" style="gap:0">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">PHOTOREALISM STUDIO</h3>
-                            <span class="project-tag tag-live">PRODUCTION</span>
-                        </div>
-                        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
-                            Technical Anchors system for generating photorealistic architectural renders. Deterministic
-                            prompt compiler with strict token governance, camera physics simulation (ISO, aperture,
-                            shutter), and material consistency validation. Built for architects and designers.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Vite</span>
-                            <span class="tech-tag">Replicate API</span>
-                            <span class="tech-tag">IndexedDB</span>
-                            <span class="tech-tag">Vercel</span>
-                        </div>
-                        <div class="metrics">
-                            <div class="metric">
-                                <div class="metric-value">3</div>
-                                <div class="metric-label">AI Models</div>
+                <!-- NEURUH -->
+                <div class="glass hud-corners hover-lift animate-on-scroll" style="margin-bottom:40px">
+                    <div class="grid-2" style="gap:0">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">NEURUH</h3>
+                                <span class="project-tag tag-live">v2.4.1 LIVE</span>
                             </div>
-                            <div class="metric">
-                                <div class="metric-value">12-Bit</div>
-                                <div class="metric-label">Color Depth</div>
+                            <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
+                                AI-powered outreach automation system. Multi-agent architecture for lead generation,
+                                research, and personalized messaging. Built with LangChain for agent orchestration and
+                                Pinecone for vector storage.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">LangChain</span>
+                                <span class="tech-tag">Pinecone</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">FastAPI</span>
+                            </div>
+                            <div class="metrics">
+                                <div class="metric">
+                                    <div class="metric-value">Multi-Agent</div>
+                                    <div class="metric-label">Architecture</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">Vector DB</div>
+                                    <div class="metric-label">Pinecone</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="code-block">
-                        <div
-                            style="display:flex;gap:6px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--phorm-gray)">
-                            <span style="width:10px;height:10px;border-radius:50%;background:#ef4444"></span>
-                            <span style="width:10px;height:10px;border-radius:50%;background:#eab308"></span>
-                            <span style="width:10px;height:10px;border-radius:50%;background:#22c55e"></span>
-                            <span
-                                style="margin-left:12px;color:var(--text-secondary);font-size:11px">lens_engine.ts</span>
+                        <div class="code-block">
+                            <div
+                                style="display:flex;gap:6px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--phorm-gray)">
+                                <span style="width:10px;height:10px;border-radius:50%;background:#ef4444"></span>
+                                <span style="width:10px;height:10px;border-radius:50%;background:#eab308"></span>
+                                <span style="width:10px;height:10px;border-radius:50%;background:#22c55e"></span>
+                                <span
+                                    style="margin-left:12px;color:var(--text-secondary);font-size:11px">agent_swarm.py</span>
+                            </div>
+                            <span class="ln">01</span><span class="kw">class</span> <span class="fn">NeuruhAgent</span>:
+                            <span class="ln">02</span> <span class="kw">def</span> <span
+                                class="fn">__init__</span>(self,
+                            objective):
+                            <span class="ln">03</span> self.memory = <span class="fn">VectorStore</span>(<span
+                                class="str">"b2b-leads"</span>)
+                            <span class="ln">04</span> self.tools = [<span class="str">"LinkedIn"</span>, <span
+                                class="str">"Email"</span>]
+                            <span class="ln">05</span>
+                            <span class="ln">06</span> <span class="kw">async def</span> <span
+                                class="fn">execute</span>(self, target):
+                            <span class="ln">07</span> <span class="cm"># 1. Scrape & Enrich</span>
+                            <span class="ln">08</span> data = <span class="kw">await</span> self.scrape(target)
+                            <span class="ln">09</span> enriched = self.memory.query(data)
+                            <span class="ln">10</span>
+                            <span class="ln">11</span> <span class="kw">if</span> enriched.score > <span
+                                class="str">0.9</span>:
+                            <span class="ln">12</span> <span class="kw">return</span> self.deploy(enriched)
                         </div>
-                        <span class="ln">01</span><span class="kw">interface</span> <span
-                            class="fn">CameraSettings</span> {
-                        <span class="ln">02</span> iso: <span class="str">100</span> | <span class="str">200</span> |
-                        <span class="str">400</span>;
-                        <span class="ln">03</span> aperture: <span class="str">'f/1.4'</span> | <span
-                            class="str">'f/2.8'</span>;
-                        <span class="ln">04</span> shutter: <span class="str">'1/125'</span> | <span
-                            class="str">'1/250'</span>;
-                        <span class="ln">05</span>}
-                        <span class="ln">06</span>
-                        <span class="ln">07</span><span class="kw">function</span> <span
-                            class="fn">compilePrompt</span>(
-                        <span class="ln">08</span> anchors, lens
-                        <span class="ln">09</span>) {
-                        <span class="ln">10</span> <span class="kw">return</span> <span
-                            class="fn">validate</span>(anchors)
-                        <span class="ln">11</span> .<span class="fn">applyLens</span>(lens);
-                        <span class="ln">12</span>}
                     </div>
                 </div>
-            </div>
 
-            <!-- ARB-BOT -->
-            <div class="glass hud-corners hover-lift animate-on-scroll">
-                <div class="grid-2" style="gap:0">
-                    <div
-                        style="background:var(--phorm-black);padding:24px;font-family:'JetBrains Mono',monospace;font-size:12px">
-                        <div style="display:flex;justify-content:space-between;margin-bottom:20px">
-                            <span style="color:var(--text-secondary)">LIVE FEED</span>
-                            <span style="color:#22c55e"><i class="fas fa-circle" style="font-size:6px"></i>
-                                ACTIVE</span>
+                <!-- BOOKEIT.COM -->
+                <div class="glass hud-corners hover-lift animate-on-scroll" style="margin-bottom:40px">
+                    <div class="grid-2" style="gap:0">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">BOOKEIT.COM</h3>
+                                <span class="project-tag tag-live">🚀 LIVE</span>
+                            </div>
+                            <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
+                                Full-stack booking platform with real-time availability, payment processing via Stripe,
+                                and
+                                automated email confirmations. Built for service businesses to manage appointments,
+                                clients,
+                                and revenue in one unified system.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Stripe</span>
+                                <span class="tech-tag">Twilio</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Vercel</span>
+                            </div>
+                            <div style="margin-top:20px">
+                                <a href="https://bookeit.com" target="_blank" class="btn-primary"
+                                    style="display:inline-block;padding:12px 24px;text-decoration:none">
+                                    <i class="fas fa-external-link-alt"></i> View Live Site
+                                </a>
+                            </div>
                         </div>
-                        <div id="arb-log" style="height:200px;overflow-y:auto"></div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">ARB-BOT</h3>
-                            <span class="project-tag tag-profit">PROFIT GEN</span>
-                        </div>
-                        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
-                            High-frequency arbitrage bot for physical goods. Scrapes marketplace APIs, compares against
-                            historical eBay sold data, and alerts when profit margin exceeds 40%.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Selenium</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Twilio</span>
-                            <span class="tech-tag">Pandas</span>
-                        </div>
-                        <div
-                            style="background:var(--phorm-black);padding:16px;margin-top:20px;border-radius:8px;font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--text-secondary)">
-                            IF (Price + Ship) < (Sold * 0.6):<br>
-                                &nbsp;&nbsp;-> TRIGGER_BUY_ALERT()<br>
-                                ELSE: -> DISCARD
+                        <div class="code-block">
+                            <div
+                                style="display:flex;gap:6px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--phorm-gray)">
+                                <span style="width:10px;height:10px;border-radius:50%;background:#ef4444"></span>
+                                <span style="width:10px;height:10px;border-radius:50%;background:#eab308"></span>
+                                <span style="width:10px;height:10px;border-radius:50%;background:#22c55e"></span>
+                                <span
+                                    style="margin-left:12px;color:var(--text-secondary);font-size:11px">booking_api.ts</span>
+                            </div>
+                            <span class="ln">01</span><span class="kw">export async function</span> <span
+                                class="fn">createBooking</span>() {
+                            <span class="ln">02</span> <span class="kw">const</span> session = <span
+                                class="kw">await</span>
+                            <span class="fn">stripe.checkout</span>
+                            <span class="ln">03</span> .sessions.<span class="fn">create</span>({
+                            <span class="ln">04</span> payment_method_types: [<span class="str">'card'</span>],
+                            <span class="ln">05</span> line_items: bookingItems,
+                            <span class="ln">06</span> mode: <span class="str">'payment'</span>,
+                            <span class="ln">07</span> });
+                            <span class="ln">08</span>
+                            <span class="ln">09</span> <span class="kw">await</span> db.bookings.<span
+                                class="fn">insert</span>({
+                            <span class="ln">10</span> sessionId: session.id,
+                            <span class="ln">11</span> status: <span class="str">'confirmed'</span>
+                            <span class="ln">12</span> });
+                            <span class="ln">13</span>}
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <!-- MASTER ARCHITECT -->
+                <div class="glass hud-corners hover-lift animate-on-scroll" style="margin-bottom:40px">
+                    <div class="grid-2" style="gap:0">
+                        <div class="code-block">
+                            <div
+                                style="display:flex;gap:6px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--phorm-gray)">
+                                <span style="width:10px;height:10px;border-radius:50%;background:#ef4444"></span>
+                                <span style="width:10px;height:10px;border-radius:50%;background:#eab308"></span>
+                                <span style="width:10px;height:10px;border-radius:50%;background:#22c55e"></span>
+                                <span
+                                    style="margin-left:12px;color:var(--text-secondary);font-size:11px">architect.jsx</span>
+                            </div>
+                            <span class="ln">01</span><span class="kw">const</span> <span
+                                class="fn">MasterArchitect</span>
+                            = () => {
+                            <span class="ln">02</span> <span class="kw">const</span> [blueprint, setBlueprint] =
+                            <span class="ln">03</span> <span class="fn">useState</span>({});
+                            <span class="ln">04</span>
+                            <span class="ln">05</span> <span class="kw">const</span> <span
+                                class="fn">generateSpec</span> =
+                            <span class="kw">async</span> () => {
+                            <span class="ln">06</span> <span class="kw">const</span> prompt = <span
+                                class="fn">compileTokens</span>(
+                            <span class="ln">07</span> blueprint, governance
+                            <span class="ln">08</span> );
+                            <span class="ln">09</span> <span class="kw">return await</span> ai.<span
+                                class="fn">generate</span>(prompt);
+                            <span class="ln">10</span> };
+                            <span class="ln">11</span>};
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">MASTER ARCHITECT</h3>
+                                <span class="project-tag tag-live">v3.1 DEPLOYED</span>
+                            </div>
+                            <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
+                                AI-assisted system specification framework. Guides users through structured prompting
+                                with
+                                tiered complexity (Quick Start, Comprehensive, Deep Dive). Generates production-ready
+                                technical specifications with governance layers and NotebookLM export.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Vite</span>
+                                <span class="tech-tag">Stripe</span>
+                                <span class="tech-tag">Vercel</span>
+                                <span class="tech-tag">Gemini API</span>
+                            </div>
+                            <div class="metrics">
+                                <div class="metric">
+                                    <div class="metric-value">3</div>
+                                    <div class="metric-label">Tier System</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">100%</div>
+                                    <div class="metric-label">Spec Quality</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PHOTOREALISM STUDIO -->
+                <div class="glass hud-corners hover-lift animate-on-scroll" style="margin-bottom:40px">
+                    <div class="grid-2" style="gap:0">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">PHOTOREALISM STUDIO</h3>
+                                <span class="project-tag tag-live">PRODUCTION</span>
+                            </div>
+                            <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
+                                Technical Anchors system for generating photorealistic architectural renders.
+                                Deterministic
+                                prompt compiler with strict token governance, camera physics simulation (ISO, aperture,
+                                shutter), and material consistency validation. Built for architects and designers.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Vite</span>
+                                <span class="tech-tag">Replicate API</span>
+                                <span class="tech-tag">IndexedDB</span>
+                                <span class="tech-tag">Vercel</span>
+                            </div>
+                            <div class="metrics">
+                                <div class="metric">
+                                    <div class="metric-value">3</div>
+                                    <div class="metric-label">AI Models</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">12-Bit</div>
+                                    <div class="metric-label">Color Depth</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-block">
+                            <div
+                                style="display:flex;gap:6px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--phorm-gray)">
+                                <span style="width:10px;height:10px;border-radius:50%;background:#ef4444"></span>
+                                <span style="width:10px;height:10px;border-radius:50%;background:#eab308"></span>
+                                <span style="width:10px;height:10px;border-radius:50%;background:#22c55e"></span>
+                                <span
+                                    style="margin-left:12px;color:var(--text-secondary);font-size:11px">lens_engine.ts</span>
+                            </div>
+                            <span class="ln">01</span><span class="kw">interface</span> <span
+                                class="fn">CameraSettings</span> {
+                            <span class="ln">02</span> iso: <span class="str">100</span> | <span class="str">200</span>
+                            |
+                            <span class="str">400</span>;
+                            <span class="ln">03</span> aperture: <span class="str">'f/1.4'</span> | <span
+                                class="str">'f/2.8'</span>;
+                            <span class="ln">04</span> shutter: <span class="str">'1/125'</span> | <span
+                                class="str">'1/250'</span>;
+                            <span class="ln">05</span>}
+                            <span class="ln">06</span>
+                            <span class="ln">07</span><span class="kw">function</span> <span
+                                class="fn">compilePrompt</span>(
+                            <span class="ln">08</span> anchors, lens
+                            <span class="ln">09</span>) {
+                            <span class="ln">10</span> <span class="kw">return</span> <span
+                                class="fn">validate</span>(anchors)
+                            <span class="ln">11</span> .<span class="fn">applyLens</span>(lens);
+                            <span class="ln">12</span>}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ARB-BOT -->
+                <div class="glass hud-corners hover-lift animate-on-scroll">
+                    <div class="grid-2" style="gap:0">
+                        <div
+                            style="background:var(--phorm-black);padding:24px;font-family:'JetBrains Mono',monospace;font-size:12px">
+                            <div style="display:flex;justify-content:space-between;margin-bottom:20px">
+                                <span style="color:var(--text-secondary)">LIVE FEED</span>
+                                <span style="color:#22c55e"><i class="fas fa-circle" style="font-size:6px"></i>
+                                    ACTIVE</span>
+                            </div>
+                            <div id="arb-log" style="height:200px;overflow-y:auto"></div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">ARB-BOT</h3>
+                                <span class="project-tag tag-profit">PROFIT GEN</span>
+                            </div>
+                            <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
+                                High-frequency arbitrage bot for physical goods. Scrapes marketplace APIs, compares
+                                against
+                                historical eBay sold data, and alerts when profit margin exceeds 40%.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Selenium</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Twilio</span>
+                                <span class="tech-tag">Pandas</span>
+                            </div>
+                            <div
+                                style="background:var(--phorm-black);padding:16px;margin-top:20px;border-radius:8px;font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--text-secondary)">
+                                IF (Price + Ship) < (Sold * 0.6):<br>
+                                    &nbsp;&nbsp;-> TRIGGER_BUY_ALERT()<br>
+                                    ELSE: -> DISCARD
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- END TAB: LIVE APPS -->
+
+            <!-- TAB: OPEN SOURCE -->
+            <div id="open-source" class="tab-content">
+                <div class="github-grid">
+                    <!-- DFSE-QECA -->
+                    <div class="github-card">
+                        <div class="repo-header">
+                            <div class="repo-name">DFSE-QECA</div>
+                            <span class="repo-lang">Python</span>
+                        </div>
+                        <p class="repo-desc">0.05s quantum-proof encryption with AI-shifted keys. First piece of
+                            QECA—fast, secure, unstoppable. Dynamic key rotation for post-quantum security.</p>
+                        <a href="https://github.com/yousernamehere/DFSE-QECA" target="_blank" class="repo-link">
+                            <i class="fab fa-github"></i> View Repository →
+                        </a>
+                    </div>
+
+                    <!-- private-ai-community -->
+                    <div class="github-card">
+                        <div class="repo-header">
+                            <div class="repo-name">PRIVATE-AI-COMMUNITY</div>
+                            <span class="repo-lang">TypeScript</span>
+                        </div>
+                        <p class="repo-desc">The Open Source MCP Gateway for Sovereign Intelligence. Build AI systems
+                            that run on your infrastructure with zero data leakage.</p>
+                        <a href="https://github.com/yousernamehere/private-ai-community" target="_blank"
+                            class="repo-link">
+                            <i class="fab fa-github"></i> View Repository →
+                        </a>
+                    </div>
+
+                    <!-- mnemosyne -->
+                    <div class="github-card">
+                        <div class="repo-header">
+                            <div class="repo-name">MNEMOSYNE</div>
+                            <span class="repo-lang">Python</span>
+                        </div>
+                        <p class="repo-desc">Personal Sovereign Agent: Local-first AI system with cognitive
+                            architecture, GraphRAG memory, and zero-trust security. Your AI that remembers everything.
+                        </p>
+                        <a href="https://github.com/yousernamehere/mnemosyne" target="_blank" class="repo-link">
+                            <i class="fab fa-github"></i> View Repository →
+                        </a>
+                    </div>
+
+                    <!-- neuruh-visual-cortex -->
+                    <div class="github-card">
+                        <div class="repo-header">
+                            <div class="repo-name">NEURUH-VISUAL-CORTEX</div>
+                            <span class="repo-lang">Python</span>
+                        </div>
+                        <p class="repo-desc">The Agentic Engine for Brand-Aligned AI Video Generation. Modular pipeline
+                            with quality control loops and automatic kill switches.</p>
+                        <a href="https://github.com/yousernamehere/neuruh-visual-cortex" target="_blank"
+                            class="repo-link">
+                            <i class="fab fa-github"></i> View Repository →
+                        </a>
+                    </div>
+
+                    <!-- signal-iq -->
+                    <div class="github-card">
+                        <div class="repo-header">
+                            <div class="repo-name">SIGNAL-IQ</div>
+                            <span class="repo-lang">TypeScript</span>
+                        </div>
+                        <p class="repo-desc">Real Estate Intelligence Platform. AI-powered market analysis with signal
+                            detection for investment opportunities.</p>
+                        <a href="https://github.com/yousernamehere/signal-iq" target="_blank" class="repo-link">
+                            <i class="fab fa-github"></i> View Repository →
+                        </a>
+                    </div>
+
+                    <!-- master-architect-app -->
+                    <div class="github-card">
+                        <div class="repo-header">
+                            <div class="repo-name">MASTER-ARCHITECT-APP</div>
+                            <span class="repo-lang">JavaScript</span>
+                        </div>
+                        <p class="repo-desc">System Specification Framework for AI-assisted development. Generate
+                            investor-grade technical specifications with governance layers.</p>
+                        <a href="https://github.com/yousernamehere/master-architect-app" target="_blank"
+                            class="repo-link">
+                            <i class="fab fa-github"></i> View Repository →
+                        </a>
+                    </div>
+                </div>
+            </div><!-- END TAB: OPEN SOURCE -->
+
+            <!-- TAB: AI PROJECTS -->
+            <div id="ai-projects" class="tab-content">
+                <div class="github-grid">
+                    <!-- TaxShieldFull -->
+                    <div class="github-card">
+                        <div class="repo-header">
+                            <div class="repo-name">TAXSHIELD-FULL</div>
+                            <span class="repo-lang">Python</span>
+                        </div>
+                        <p class="repo-desc">AI-powered tax optimization system. Analyzes financial data to identify
+                            legitimate tax reduction strategies and savings opportunities.</p>
+                        <a href="https://github.com/yousernamehere/TaxShieldFull" target="_blank" class="repo-link">
+                            <i class="fab fa-github"></i> View Repository →
+                        </a>
+                    </div>
+
+                    <!-- RealEstateDealArchitect -->
+                    <div class="github-card">
+                        <div class="repo-header">
+                            <div class="repo-name">REAL-ESTATE-DEAL-ARCHITECT</div>
+                            <span class="repo-lang">Python</span>
+                        </div>
+                        <p class="repo-desc">AI system for analyzing and structuring real estate deals. Evaluates
+                            investment potential and generates deal recommendations.</p>
+                        <a href="https://github.com/yousernamehere/RealEstateDealArchitect" target="_blank"
+                            class="repo-link">
+                            <i class="fab fa-github"></i> View Repository →
+                        </a>
+                    </div>
+
+                    <!-- pulsar-dc-mvp -->
+                    <div class="github-card">
+                        <div class="repo-header">
+                            <div class="repo-name">PULSAR-DC-MVP</div>
+                            <span class="repo-lang">Python</span>
+                        </div>
+                        <p class="repo-desc">Pulsar Data Center MVP. High-performance data processing pipeline for
+                            real-time analytics and decision making.</p>
+                        <a href="https://github.com/yousernamehere/pulsar-dc-mvp" target="_blank" class="repo-link">
+                            <i class="fab fa-github"></i> View Repository →
+                        </a>
+                    </div>
+
+                    <!-- nimdp-validator -->
+                    <div class="github-card">
+                        <div class="repo-header">
+                            <div class="repo-name">NIMDP-VALIDATOR</div>
+                            <span class="repo-lang">Python</span>
+                        </div>
+                        <p class="repo-desc">Validation engine for Non-Interactive Markov Decision Processes. Ensures
+                            policy correctness in reinforcement learning systems.</p>
+                        <a href="https://github.com/yousernamehere/nimdp-validator" target="_blank" class="repo-link">
+                            <i class="fab fa-github"></i> View Repository →
+                        </a>
+                    </div>
+
+                    <!-- neuruh-bba-lite -->
+                    <div class="github-card">
+                        <div class="repo-header">
+                            <div class="repo-name">NEURUH-BBA-LITE</div>
+                            <span class="repo-lang">Python</span>
+                        </div>
+                        <p class="repo-desc">Lightweight Business Buying Analysis system. Rapid evaluation of
+                            acquisition targets with AI-driven due diligence.</p>
+                        <a href="https://github.com/yousernamehere/neuruh-bba-lite" target="_blank" class="repo-link">
+                            <i class="fab fa-github"></i> View Repository →
+                        </a>
+                    </div>
+                </div>
+            </div><!-- END TAB: AI PROJECTS -->
 
             <!-- PROJECT GALLERY -->
             <div class="section-header" style="margin-top:80px">
@@ -436,7 +642,8 @@
                         style="width:100%;height:auto;display:block">
                     <div style="padding:16px;background:var(--phorm-surface)">
                         <div class="font-display" style="font-size:14px;margin-bottom:4px">NEURUH PRIME</div>
-                        <div class="font-mono" style="font-size:11px;color:var(--text-secondary)">Autonomous Real Estate
+                        <div class="font-mono" style="font-size:11px;color:var(--text-secondary)">Autonomous Real
+                            Estate
                             OS</div>
                     </div>
                 </div>
@@ -453,8 +660,10 @@
                     <img src="assets/images/neuruh-recursive.png" alt="Intelligence is Recursive"
                         style="width:100%;height:auto;display:block">
                     <div style="padding:16px;background:var(--phorm-surface)">
-                        <div class="font-display" style="font-size:14px;margin-bottom:4px">RECURSIVE INTELLIGENCE</div>
-                        <div class="font-mono" style="font-size:11px;color:var(--text-secondary)">Execution Layer for
+                        <div class="font-display" style="font-size:14px;margin-bottom:4px">RECURSIVE INTELLIGENCE
+                        </div>
+                        <div class="font-mono" style="font-size:11px;color:var(--text-secondary)">Execution Layer
+                            for
                             Sovereign AI</div>
                     </div>
                 </div>
