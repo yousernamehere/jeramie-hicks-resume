@@ -7,15 +7,47 @@
     <title>Jeramie Hicks | AI Engineer & Full-Stack Operator</title>
     <meta name="description"
         content="I build autonomous agents and business systems that hunt revenue. 25 years of business execution meets cutting-edge AI engineering.">
+    <meta name="author" content="Jeramie Hicks">
+    <meta name="keywords" content="AI Engineer, Full-Stack Developer, LangChain, Python, React, Autonomous Agents">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Jeramie Hicks | AI Operator">
-    <meta property="og:description" content="I build autonomous agents and business systems that hunt revenue.">
+    <meta property="og:title" content="Jeramie Hicks | AI Engineer & Full-Stack Operator">
+    <meta property="og:description"
+        content="I build autonomous agents and business systems that hunt revenue. 25 years of real-world execution meets cutting-edge AI.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jeramiehicks.com">
+    <meta property="og:site_name" content="Jeramie Hicks Portfolio">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Jeramie Hicks | AI Operator">
+    <meta name="twitter:title" content="Jeramie Hicks | AI Engineer & Full-Stack Operator">
+    <meta name="twitter:description" content="I build autonomous agents and business systems that hunt revenue.">
+    <meta name="twitter:creator" content="@JeramieHicks">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jeramie Hicks",
+        "jobTitle": "AI Engineer & Full-Stack Operator",
+        "description": "Builder of autonomous agents and business systems that generate revenue",
+        "url": "https://jeramiehicks.com",
+        "sameAs": [
+            "https://github.com/yousernamehere",
+            "https://linkedin.com/in/jeramieshicks",
+            "https://x.com/JeramieHicks",
+            "https://youtube.com/@Neuruh"
+        ],
+        "knowsAbout": ["Python", "TypeScript", "React", "LangChain", "RAG", "Vector Databases", "AI Agents"],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Benton Harbor",
+            "addressRegion": "MI",
+            "addressCountry": "US"
+        }
+    }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,8 +64,14 @@
 </head>
 
 <body>
-    <!-- Animated Background -->
-    <div class="bg-mesh"></div>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Particle Canvas Background -->
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <!-- Animated Background Mesh -->
+    <div class="bg-mesh" aria-hidden="true"></div>
 
     <!-- Navigation -->
     <nav>
@@ -56,7 +94,7 @@
         </a>
     </nav>
 
-    <main>
+    <main id="main-content">
         <!-- HERO -->
         <section id="intel" class="hero">
             <div class="status-badge animate-fade-up">
@@ -165,6 +203,161 @@
                         <span class="ln">11</span> <span class="kw">if</span> enriched.score > <span
                             class="str">0.9</span>:
                         <span class="ln">12</span> <span class="kw">return</span> self.deploy(enriched)
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOOKEIT.COM -->
+            <div class="glass hud-corners hover-lift animate-on-scroll" style="margin-bottom:40px">
+                <div class="grid-2" style="gap:0">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">BOOKEIT.COM</h3>
+                            <span class="project-tag tag-live">🚀 LIVE</span>
+                        </div>
+                        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
+                            Full-stack booking platform with real-time availability, payment processing via Stripe, and automated email confirmations. Built for service businesses to manage appointments, clients, and revenue in one unified system.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Stripe</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                        <div style="margin-top:20px">
+                            <a href="https://bookeit.com" target="_blank" class="btn-primary" style="display:inline-block;padding:12px 24px;text-decoration:none">
+                                <i class="fas fa-external-link-alt"></i> View Live Site
+                            </a>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <div
+                            style="display:flex;gap:6px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--phorm-gray)">
+                            <span style="width:10px;height:10px;border-radius:50%;background:#ef4444"></span>
+                            <span style="width:10px;height:10px;border-radius:50%;background:#eab308"></span>
+                            <span style="width:10px;height:10px;border-radius:50%;background:#22c55e"></span>
+                            <span
+                                style="margin-left:12px;color:var(--text-secondary);font-size:11px">booking_api.ts</span>
+                        </div>
+                        <span class="ln">01</span><span class="kw">export async function</span> <span class="fn">createBooking</span>() {
+                        <span class="ln">02</span>  <span class="kw">const</span> session = <span class="kw">await</span> <span class="fn">stripe.checkout</span>
+                        <span class="ln">03</span>    .sessions.<span class="fn">create</span>({
+                        <span class="ln">04</span>      payment_method_types: [<span class="str">'card'</span>],
+                        <span class="ln">05</span>      line_items: bookingItems,
+                        <span class="ln">06</span>      mode: <span class="str">'payment'</span>,
+                        <span class="ln">07</span>    });
+                        <span class="ln">08</span>
+                        <span class="ln">09</span>  <span class="kw">await</span> db.bookings.<span class="fn">insert</span>({
+                        <span class="ln">10</span>    sessionId: session.id,
+                        <span class="ln">11</span>    status: <span class="str">'confirmed'</span>
+                        <span class="ln">12</span>  });
+                        <span class="ln">13</span>}
+                    </div>
+                </div>
+            </div>
+
+            <!-- MASTER ARCHITECT -->
+            <div class="glass hud-corners hover-lift animate-on-scroll" style="margin-bottom:40px">
+                <div class="grid-2" style="gap:0">
+                    <div class="code-block">
+                        <div
+                            style="display:flex;gap:6px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--phorm-gray)">
+                            <span style="width:10px;height:10px;border-radius:50%;background:#ef4444"></span>
+                            <span style="width:10px;height:10px;border-radius:50%;background:#eab308"></span>
+                            <span style="width:10px;height:10px;border-radius:50%;background:#22c55e"></span>
+                            <span
+                                style="margin-left:12px;color:var(--text-secondary);font-size:11px">architect.jsx</span>
+                        </div>
+                        <span class="ln">01</span><span class="kw">const</span> <span class="fn">MasterArchitect</span> = () => {
+                        <span class="ln">02</span>  <span class="kw">const</span> [blueprint, setBlueprint] = 
+                        <span class="ln">03</span>    <span class="fn">useState</span>({});
+                        <span class="ln">04</span>
+                        <span class="ln">05</span>  <span class="kw">const</span> <span class="fn">generateSpec</span> = <span class="kw">async</span> () => {
+                        <span class="ln">06</span>    <span class="kw">const</span> prompt = <span class="fn">compileTokens</span>(
+                        <span class="ln">07</span>      blueprint, governance
+                        <span class="ln">08</span>    );
+                        <span class="ln">09</span>    <span class="kw">return await</span> ai.<span class="fn">generate</span>(prompt);
+                        <span class="ln">10</span>  };
+                        <span class="ln">11</span>};
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">MASTER ARCHITECT</h3>
+                            <span class="project-tag tag-live">v3.1 DEPLOYED</span>
+                        </div>
+                        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
+                            AI-assisted system specification framework. Guides users through structured prompting with tiered complexity (Quick Start, Comprehensive, Deep Dive). Generates production-ready technical specifications with governance layers and NotebookLM export.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Vite</span>
+                            <span class="tech-tag">Stripe</span>
+                            <span class="tech-tag">Gemini API</span>
+                        </div>
+                        <div class="metrics">
+                            <div class="metric">
+                                <div class="metric-value">3</div>
+                                <div class="metric-label">Tier System</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100%</div>
+                                <div class="metric-label">Spec Quality</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHOTOREALISM STUDIO -->
+            <div class="glass hud-corners hover-lift animate-on-scroll" style="margin-bottom:40px">
+                <div class="grid-2" style="gap:0">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">PHOTOREALISM STUDIO</h3>
+                            <span class="project-tag tag-live">PRODUCTION</span>
+                        </div>
+                        <p style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px">
+                            Technical Anchors system for generating photorealistic architectural renders. Deterministic prompt compiler with strict token governance, camera physics simulation (ISO, aperture, shutter), and material consistency validation. Built for architects and designers.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Vite</span>
+                            <span class="tech-tag">AI Integration</span>
+                        </div>
+                        <div class="metrics">
+                            <div class="metric">
+                                <div class="metric-value">12-Bit</div>
+                                <div class="metric-label">Color Depth</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100%</div>
+                                <div class="metric-label">Deterministic</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <div
+                            style="display:flex;gap:6px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--phorm-gray)">
+                            <span style="width:10px;height:10px;border-radius:50%;background:#ef4444"></span>
+                            <span style="width:10px;height:10px;border-radius:50%;background:#eab308"></span>
+                            <span style="width:10px;height:10px;border-radius:50%;background:#22c55e"></span>
+                            <span
+                                style="margin-left:12px;color:var(--text-secondary);font-size:11px">lens_engine.ts</span>
+                        </div>
+                        <span class="ln">01</span><span class="kw">interface</span> <span class="fn">CameraSettings</span> {
+                        <span class="ln">02</span>  iso: <span class="str">100</span> | <span class="str">200</span> | <span class="str">400</span>;
+                        <span class="ln">03</span>  aperture: <span class="str">'f/1.4'</span> | <span class="str">'f/2.8'</span>;
+                        <span class="ln">04</span>  shutter: <span class="str">'1/125'</span> | <span class="str">'1/250'</span>;
+                        <span class="ln">05</span>}
+                        <span class="ln">06</span>
+                        <span class="ln">07</span><span class="kw">function</span> <span class="fn">compilePrompt</span>(
+                        <span class="ln">08</span>  anchors, lens
+                        <span class="ln">09</span>) {
+                        <span class="ln">10</span>  <span class="kw">return</span> <span class="fn">validate</span>(anchors)
+                        <span class="ln">11</span>    .<span class="fn">applyLens</span>(lens);
+                        <span class="ln">12</span>}
                     </div>
                 </div>
             </div>
