@@ -8,7 +8,14 @@
     <meta name="description"
         content="I build autonomous agents and business systems that hunt revenue. 25 years of business execution meets cutting-edge AI engineering.">
     <meta name="author" content="Jeramie Hicks">
-    <meta name="keywords" content="AI Engineer, Full-Stack Developer, LangChain, Python, React, Autonomous Agents">
+    <meta name="keywords"
+        content="AI Engineer, Full-Stack Developer, LangChain, Python, React, Autonomous Agents, Machine Learning, RAG, Vector Databases">
+
+    <!-- Performance: Theme Color & Mobile -->
+    <meta name="theme-color" content="#0a0c14">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Jeramie Hicks | AI Engineer & Full-Stack Operator">
@@ -17,12 +24,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jeramiehicks.com">
     <meta property="og:site_name" content="Jeramie Hicks Portfolio">
+    <meta property="og:image" content="https://jeramiehicks.com/assets/images/og-image.png">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Jeramie Hicks | AI Engineer & Full-Stack Operator">
     <meta name="twitter:description" content="I build autonomous agents and business systems that hunt revenue.">
     <meta name="twitter:creator" content="@JeramieHicks">
+    <meta name="twitter:image" content="https://jeramiehicks.com/assets/images/og-image.png">
+
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -39,7 +56,7 @@
             "https://x.com/JeramieHicks",
             "https://youtube.com/@Neuruh"
         ],
-        "knowsAbout": ["Python", "TypeScript", "React", "LangChain", "RAG", "Vector Databases", "AI Agents"],
+        "knowsAbout": ["Python", "TypeScript", "React", "LangChain", "RAG", "Vector Databases", "AI Agents", "Machine Learning", "FastAPI", "Next.js"],
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Benton Harbor",
@@ -49,19 +66,32 @@
     }
     </script>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Performance: Preload Critical Resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        as="style">
+
+    <!-- Fonts with display=swap for faster text rendering -->
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Icons - Load async to not block render -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
 </head>
+
 
 <body>
     <!-- Skip Link for Accessibility -->
@@ -639,7 +669,7 @@
             <div class="grid-2" style="gap:16px">
                 <div class="glass hover-lift" style="overflow:hidden;border-radius:12px">
                     <img src="assets/images/neuruh-prime.png" alt="NEURUH Prime - Deterministic Intelligence"
-                        style="width:100%;height:auto;display:block">
+                        loading="lazy" decoding="async" style="width:100%;height:auto;display:block">
                     <div style="padding:16px;background:var(--phorm-surface)">
                         <div class="font-display" style="font-size:14px;margin-bottom:4px">NEURUH PRIME</div>
                         <div class="font-mono" style="font-size:11px;color:var(--text-secondary)">Autonomous Real
@@ -648,8 +678,8 @@
                     </div>
                 </div>
                 <div class="glass hover-lift" style="overflow:hidden;border-radius:12px">
-                    <img src="assets/images/neuruh-all.png" alt="NEURUH ALL - Pure Execution"
-                        style="width:100%;height:auto;display:block">
+                    <img src="assets/images/neuruh-all.png" alt="NEURUH ALL - Pure Execution" loading="lazy"
+                        decoding="async" style="width:100%;height:auto;display:block">
                     <div style="padding:16px;background:var(--phorm-surface)">
                         <div class="font-display" style="font-size:14px;margin-bottom:4px">NEURUH ALL</div>
                         <div class="font-mono" style="font-size:11px;color:var(--text-secondary)">Decentralized
@@ -657,8 +687,8 @@
                     </div>
                 </div>
                 <div class="glass hover-lift" style="overflow:hidden;border-radius:12px">
-                    <img src="assets/images/neuruh-recursive.png" alt="Intelligence is Recursive"
-                        style="width:100%;height:auto;display:block">
+                    <img src="assets/images/neuruh-recursive.png" alt="Intelligence is Recursive" loading="lazy"
+                        decoding="async" style="width:100%;height:auto;display:block">
                     <div style="padding:16px;background:var(--phorm-surface)">
                         <div class="font-display" style="font-size:14px;margin-bottom:4px">RECURSIVE INTELLIGENCE
                         </div>
@@ -668,7 +698,7 @@
                     </div>
                 </div>
                 <div class="glass hover-lift" style="overflow:hidden;border-radius:12px">
-                    <img src="assets/images/opus-singularity.png" alt="OPUS Singularity"
+                    <img src="assets/images/opus-singularity.png" alt="OPUS Singularity" loading="lazy" decoding="async"
                         style="width:100%;height:auto;display:block">
                     <div style="padding:16px;background:var(--phorm-surface)">
                         <div class="font-display" style="font-size:14px;margin-bottom:4px">OPUS SINGULARITY</div>
@@ -800,7 +830,7 @@
         </footer>
     </main>
 
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
 </body>
 
 </html>

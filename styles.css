@@ -1,5 +1,5 @@
 /* 1st Phorm Inspired Resume - Premium Brand Theme */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+/* Performance: Fonts loaded in HTML with preload */
 
 :root {
   /* 1st Phorm Brand Colors */
@@ -33,6 +33,7 @@
   margin: 0;
   padding: 0;
 }
+
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -1107,7 +1108,7 @@ footer {
 }
 
 .tab-btn .badge {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   padding: 2px 8px;
   border-radius: 10px;
   font-size: 12px;
@@ -1115,7 +1116,7 @@ footer {
 }
 
 .tab-btn.active .badge {
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .tab-content {
@@ -1247,13 +1248,16 @@ footer {
   .tab-nav {
     flex-direction: column;
   }
+
   .tab-btn {
     width: 100%;
     justify-content: center;
   }
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .github-grid {
     grid-template-columns: 1fr;
   }
